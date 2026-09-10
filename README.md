@@ -5,7 +5,7 @@ A responsive customer-support workspace for reviewing, prioritising, and resolvi
 ## Project links
 
 - **GitHub repository:** [Customer-Support-Dashboard](https://github.com/ShamiyaParveen/Customer-Support-Dashboard)
-- **Live demo:** Not deployed yet. Add the deployed URL here when available.
+- **Live demo:** (https://customer-support-dashboard-vert.vercel.app/)
 
 ## Features
 
