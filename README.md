@@ -1,66 +1,80 @@
 # Customer Support Dashboard
 
-Frontend technical assessment for a Customer Support Dashboard.
+A responsive customer-support workspace for reviewing, prioritising, and resolving customer requests. It gives support teams a focused view of ticket activity, customer context, and conversations.
 
-## Tech Stack
+## Project links
 
-- React.js
-- Vite
-- Tailwind CSS
-- Zustand
-- Lucide React
-- JSONPlaceholder REST API
+- **GitHub repository:** [Customer-Support-Dashboard](https://github.com/ShamiyaParveen/Customer-Support-Dashboard)
+- **Live demo:** Not deployed yet. Add the deployed URL here when available.
 
 ## Features
 
-- Dashboard statistics: Total, Open, In Progress, Resolved
-- Working hash-based navigation for Dashboard, Tickets, Customers, and Settings
-- Ticket search
-- Filter by status
-- Filter by priority
-- Change ticket status
-- Ticket detail side panel
-- Customer information
-- Customer directory with a shortcut to each customer's tickets
-- Issue details
-- Conversation/messages
-- Loading, error and empty states
-- Responsive desktop/mobile UI
-- Reusable React components
-- Zustand state management
-- Mock/public REST API integration
-- Offline fallback ticket data, so the app remains usable if the demo API is unavailable
+- Dashboard summary cards for total, open, in-progress, and resolved tickets
+- Ticket table with customer name, subject, priority, status, and created date
+- Search tickets by ticket ID, customer, email, or subject
+- Filter tickets by status and priority
+- Update ticket status directly from the table or ticket details panel
+- Ticket-details side panel with customer information, issue details, date/time, priority, status, and conversation history
+- Customer directory with customer search and shortcuts to their tickets
+- Loading, error, and empty states
+- Responsive sidebar and layouts for desktop and mobile devices
+- Hash-based navigation for Dashboard, Tickets, Customers, and Settings
+- Browser-saved settings preferences
 
-## Run locally
+## Tech stack
+
+- React 18 and Vite
+- Tailwind CSS
+- Zustand for ticket state management
+- Lucide React for icons
+- JSONPlaceholder public REST API, with built-in fallback data for offline/API-failure use
+
+## Getting started
+
+### Prerequisites
+
+- Node.js 18 or newer
+- npm
+
+### Installation
 
 ```bash
+git clone https://github.com/ShamiyaParveen/Customer-Support-Dashboard.git
+cd Customer-Support-Dashboard
 npm install
 npm run dev
 ```
 
-Open the local URL shown by Vite.
+Open the local URL printed by Vite (usually `http://localhost:5173`).
 
-## Production build
+## Available commands
 
 ```bash
+# Start the development server
+npm run dev
+
+# Create a production build
 npm run build
+
+# Preview the production build locally
 npm run preview
 ```
 
-## API
+## Data and state management
 
-Ticket data is created by transforming public JSONPlaceholder posts/users into support-ticket objects. If that demo service is unavailable, the app automatically uses built-in mock ticket data. Status changes are handled locally with Zustand because the public demo API is read-only for this assessment.
+On first load, the app requests posts and users from JSONPlaceholder and converts them into support tickets. If the public API is unavailable or times out, it automatically uses bundled mock ticket data so the dashboard remains usable.
 
-## Navigation
+Zustand manages ticket loading, errors, and status updates. Ticket-status changes are kept in the current browser session; settings preferences are saved in `localStorage`.
 
-The sidebar is fully functional. It also supports direct URLs and browser history:
+## Routes
+
+The app uses hash-based routes, so the following URLs can be opened directly:
 
 - `#dashboard`
 - `#tickets`
 - `#customers`
 - `#settings`
 
-## AI Usage
+## AI usage
 
-AI assistance was used during development for code generation, component structuring, debugging guidance, and documentation. The submitted code should be understood and reviewed by the developer before submission.
-
+OpenAI Codex was used for development assistance, including implementation guidance, component structure, debugging, and this documentation. The code was reviewed to ensure its behavior is understood.
