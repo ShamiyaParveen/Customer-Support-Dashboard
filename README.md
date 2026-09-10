@@ -64,10 +64,3 @@ The sidebar is fully functional. It also supports direct URLs and browser histor
 
 AI assistance was used during development for code generation, component structuring, debugging guidance, and documentation. The submitted code should be understood and reviewed by the developer before submission.
 
-## Submission checklist
-
-- [ ] Push project to GitHub
-- [ ] Deploy to Vercel/Netlify
-- [ ] Add live URL to README
-- [ ] Test desktop and mobile layouts
-- [ ] Verify search, filters, status updates and ticket details
